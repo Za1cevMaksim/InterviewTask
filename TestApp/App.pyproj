@@ -3,13 +3,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>975a018d-ffce-4abc-afae-2c4149fd6fd0</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>TestApp.py</StartupFile>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>TestApp</Name>
+    <Name>app</Name>
     <RootNamespace>TestApp</RootNamespace>
     <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
@@ -22,7 +23,24 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TestApp.py" />
+    <Compile Include="api\channels.py" />
+    <Compile Include="api\messages.py" />
+    <Compile Include="api\users.py" />
+    <Compile Include="auth.py" />
+    <Compile Include="crud.py" />
+    <Compile Include="db\database.py" />
+    <Compile Include="main.py" />
+    <Compile Include="models.py" />
+    <Compile Include="schemas.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="api\" />
+    <Folder Include="db\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="templates\login.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
